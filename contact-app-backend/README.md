@@ -49,6 +49,6 @@ Date: Mon, 05 Feb 2018 12:22:49 GMT
 
 You can test update and delete using these commands.
 ```
-curl -i -X PUT -H "Content-Type: application/json" -d '{"name":"John Dodol"}'
+curl -i -X PUT -H "Content-Type: application/json" localhost:8080/contacts/5be89a2aaa50755644f33856  -d '{"name":"John Dodol"}'
 curl -i -X DELETE localhost:8080/contacts/5a784bbfb9d4f121d9a31195
 ```
