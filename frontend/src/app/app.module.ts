@@ -5,6 +5,7 @@ import {ContactComponent} from './contact/contact.component';
 import {FormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
 import {RouterModule, Routes} from '@angular/router';
+import {ContactDetailComponent} from './contact-detail/contact-detail.component';
 
 
 const appRoutes: Routes = [
@@ -23,7 +24,8 @@ const appRoutes: Routes = [
 @NgModule({
   declarations: [
     AppComponent,
-    ContactComponent
+    ContactComponent,
+    ContactDetailComponent
   ],
   imports: [
     BrowserModule,
