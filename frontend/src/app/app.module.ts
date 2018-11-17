@@ -6,6 +6,7 @@ import {FormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
 import {RouterModule, Routes} from '@angular/router';
 import {ContactDetailComponent} from './contact-detail/contact-detail.component';
+import {ContactCreateComponent} from './contact-create/contact-create.component';
 
 
 const appRoutes: Routes = [
@@ -30,7 +31,8 @@ const appRoutes: Routes = [
   declarations: [
     AppComponent,
     ContactComponent,
-    ContactDetailComponent
+    ContactDetailComponent,
+    ContactCreateComponent
   ],
   imports: [
     BrowserModule,
