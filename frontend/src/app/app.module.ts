@@ -7,6 +7,7 @@ import {HttpClientModule} from '@angular/common/http';
 import {RouterModule, Routes} from '@angular/router';
 import {ContactDetailComponent} from './contact-detail/contact-detail.component';
 import {ContactCreateComponent} from './contact-create/contact-create.component';
+import {ContactEditComponent} from './contact-edit/contact-edit.component';
 
 
 const appRoutes: Routes = [
@@ -21,6 +22,11 @@ const appRoutes: Routes = [
     data: {title: 'Contact Details'}
   },
   {
+    path: 'contact-create',
+    component: ContactCreateComponent,
+    data: {title: 'Create Contact'}
+  },
+  {
     path: '',
     redirectTo: '/contact',
     pathMatch: 'full'
@@ -32,7 +38,8 @@ const appRoutes: Routes = [
     AppComponent,
     ContactComponent,
     ContactDetailComponent,
-    ContactCreateComponent
+    ContactCreateComponent,
+    ContactEditComponent
   ],
   imports: [
     BrowserModule,
