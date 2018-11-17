@@ -15,4 +15,8 @@
   <div class="col-md-12">
     <a [routerLink]="['/contact-edit', contact.id]" class="btn btn-success">EDIT</a>
   </div>
+  <div class="col-md-12">
+    <a [routerLink]="['/contact-edit', contact.id]" class="btn btn-success">EDIT</a>
+    <button class="btn btn-danger" type="button" (click)="deleteContact(contact.id)">DELETE</button>
+  </div>
 </div>

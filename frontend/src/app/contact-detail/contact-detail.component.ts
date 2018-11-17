@@ -11,7 +11,7 @@ export class ContactEditComponent implements OnInit {
 
   contact = {};
 
-  constructor(private http: HttpClient, private router: Router, private route: ActivatedRoute) {
+  constructor(private router: Router, private route: ActivatedRoute, private http: HttpClient) {
   }
 
   ngOnInit() {
@@ -29,6 +29,16 @@ export class ContactEditComponent implements OnInit {
       .subscribe(res => {
           let id = res['id'];
           this.router.navigate(['/contact-detail', id]);
+        }, (err) => {
+          console.log(err);
+        }
+      );
+  }
+
+  deleteContact(id) {
+    this.http.delete('/contacts/' + id)
+      .subscribe(res => {
+          this.router.navigate(['/contact']);
         }, (err) => {
           console.log(err);
         }
