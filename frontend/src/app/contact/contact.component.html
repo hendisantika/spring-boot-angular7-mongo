@@ -14,7 +14,7 @@
       <td>{{ contact.title }}</td>
       <td>{{ contact.city }}</td>
       <td>{{ contact.email }}</td>
-      <td>Show Detail</td>
+      <td><a [routerLink]="['/contact-detail', contact.id]">Show Detail</a></td>
     </tr>
     </tbody>
   </table>

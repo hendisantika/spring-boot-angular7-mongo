@@ -1,4 +1,6 @@
 import {Component, OnInit} from '@angular/core';
+import {HttpClient} from '@angular/common/http';
+import {ActivatedRoute} from '@angular/router';
 
 @Component({
   selector: 'app-contact-detail',
@@ -7,10 +9,19 @@ import {Component, OnInit} from '@angular/core';
 })
 export class ContactDetailComponent implements OnInit {
 
-  constructor() {
+  contact = {};
+
+  constructor(private route: ActivatedRoute, private http: HttpClient) {
   }
 
   ngOnInit() {
+    this.getContactDetail(this.route.snapshot.params['id']);
+  }
+
+  getContactDetail(id) {
+    this.http.get('/contacts/' + id).subscribe(data => {
+      this.contact = data;
+    });
   }
 
 }

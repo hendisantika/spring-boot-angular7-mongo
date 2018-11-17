@@ -15,6 +15,11 @@ const appRoutes: Routes = [
     data: {title: 'Contact List'}
   },
   {
+    path: 'contact-detail/:id',
+    component: ContactDetailComponent,
+    data: {title: 'Contact Details'}
+  },
+  {
     path: '',
     redirectTo: '/contact',
     pathMatch: 'full'
