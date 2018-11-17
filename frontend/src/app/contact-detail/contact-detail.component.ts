@@ -11,8 +11,7 @@ export class ContactEditComponent implements OnInit {
 
   contact = {};
 
-  constructor(private router: Router, private route: ActivatedRoute, private http: HttpClient) {
-  }
+  constructor(private router: Router, private route: ActivatedRoute, private http: HttpClient) { }
 
   ngOnInit() {
     this.getContact(this.route.snapshot.params['id']);
