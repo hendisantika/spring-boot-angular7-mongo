@@ -27,6 +27,11 @@ const appRoutes: Routes = [
     data: {title: 'Create Contact'}
   },
   {
+    path: 'contact-edit/:id',
+    component: ContactEditComponent,
+    data: {title: 'Edit Contact'}
+  },
+  {
     path: '',
     redirectTo: '/contact',
     pathMatch: 'full'
