@@ -14,7 +14,5 @@ import org.springframework.data.repository.CrudRepository;
  * To change this template use File | Settings | File Templates.
  */
 public interface ContactRepository extends CrudRepository<Contact, String> {
-    Contact findOne(String id);
-
     void delete(Contact deleted);
 }

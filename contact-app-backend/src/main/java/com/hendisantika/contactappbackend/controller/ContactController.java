@@ -3,7 +3,13 @@ package com.hendisantika.contactappbackend.controller;
 import com.hendisantika.contactappbackend.model.Contact;
 import com.hendisantika.contactappbackend.repository.ContactRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
 
 /**
  * Created by IntelliJ IDEA.
@@ -19,28 +25,28 @@ import org.springframework.web.bind.annotation.*;
 public class ContactController {
 
     @Autowired
-    ContactRepository contactRepository;
+    private ContactRepository contactRepository;
 
-    @RequestMapping(method = RequestMethod.GET, value = "/contacts")
+    @GetMapping(value = "/contacts")
     public Iterable<Contact> contact() {
         return contactRepository.findAll();
     }
 
-    @RequestMapping(method = RequestMethod.POST, value = "/contacts")
+    @PostMapping(value = "/contacts")
     public Contact save(@RequestBody Contact contact) {
         contactRepository.save(contact);
 
         return contact;
     }
 
-    @RequestMapping(method = RequestMethod.GET, value = "/contacts/{id}")
+    @GetMapping(value = "/contacts/{id}")
     public Contact show(@PathVariable String id) {
-        return contactRepository.findOne(id);
+        return contactRepository.findById(id).get();
     }
 
-    @RequestMapping(method = RequestMethod.PUT, value = "/contacts/{id}")
+    @PutMapping(value = "/contacts/{id}")
     public Contact update(@PathVariable String id, @RequestBody Contact contact) {
-        Contact c = contactRepository.findOne(id);
+        Contact c = contactRepository.findById(id).get();
         if (contact.getName() != null)
             c.setName(contact.getName());
         if (contact.getAddress() != null)
@@ -55,11 +61,9 @@ public class ContactController {
         return contact;
     }
 
-    @RequestMapping(method = RequestMethod.DELETE, value = "/contacts/{id}")
-    public String delete(@PathVariable String id) {
-        Contact contact = contactRepository.findOne(id);
+    @DeleteMapping(value = "/contacts/{id}")
+    public void delete(@PathVariable String id) {
+        Contact contact = contactRepository.findById(id).get();
         contactRepository.delete(contact);
-
-        return "";
     }
 }
