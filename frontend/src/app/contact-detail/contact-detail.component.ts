@@ -19,7 +19,7 @@ export class ContactDetailComponent implements OnInit {
   }
 
   getContact(id) {
-    this.http.get('/contacts/' + id).subscribe(data => {
+    this.http.get('http://localhost:8080/contacts/' + id).subscribe(data => {
       this.contact = data;
     });
   }

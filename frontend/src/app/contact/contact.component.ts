@@ -14,7 +14,7 @@ export class ContactComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.http.get('/contacts').subscribe(data => {
+    this.http.get('http://localhost:8080/contacts').subscribe(data => {
       this.contacts = data;
     });
   }
