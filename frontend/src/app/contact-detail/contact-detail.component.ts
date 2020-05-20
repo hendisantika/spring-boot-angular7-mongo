@@ -3,15 +3,16 @@ import {ActivatedRoute, Router} from '@angular/router';
 import {HttpClient} from '@angular/common/http';
 
 @Component({
-  selector: 'app-contact-edit',
-  templateUrl: './contact-edit.component.html',
-  styleUrls: ['./contact-edit.component.css']
+  selector: 'app-contact-detail',
+  templateUrl: './contact-detail.component.html',
+  styleUrls: ['./contact-detail.component.css']
 })
-export class ContactEditComponent implements OnInit {
+export class ContactDetailComponent implements OnInit {
 
   contact = {};
 
-  constructor(private router: Router, private route: ActivatedRoute, private http: HttpClient) { }
+  constructor(private router: Router, private route: ActivatedRoute, private http: HttpClient) {
+  }
 
   ngOnInit() {
     this.getContact(this.route.snapshot.params['id']);
