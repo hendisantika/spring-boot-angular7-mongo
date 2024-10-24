@@ -2,7 +2,7 @@
 version: 2
 updates:
   - package-ecosystem: gradle
-    directory: "/contact-backend"
+    directory: "/contact-app-backend"
     schedule:
       interval: daily
       time: '05:00'
