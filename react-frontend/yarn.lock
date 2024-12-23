@@ -6574,15 +6574,15 @@ react-refresh@^0.11.0:
   version "0.11.0"
   resolved "https://registry.yarnpkg.com/react-refresh/-/react-refresh-0.11.0.tgz#77198b944733f0f1f1a90e791de4541f9f074046"
 
-react-router-dom@^7.1.0:
-  version "7.1.0"
-  resolved "https://registry.yarnpkg.com/react-router-dom/-/react-router-dom-7.1.0.tgz#5e48f6499a1b788edd5aacb4009d929d5f3dd4e1"
+react-router-dom@^7.1.1:
+  version "7.1.1"
+  resolved "https://registry.yarnpkg.com/react-router-dom/-/react-router-dom-7.1.1.tgz#9e76fb63a762ba5da13032f5fd9e4a24946396b6"
   dependencies:
-    react-router "7.1.0"
+    react-router "7.1.1"
 
-react-router@7.1.0:
-  version "7.1.0"
-  resolved "https://registry.yarnpkg.com/react-router/-/react-router-7.1.0.tgz#85911e27aae8c4a57482f2404aef65ac9ca68a10"
+react-router@7.1.1:
+  version "7.1.1"
+  resolved "https://registry.yarnpkg.com/react-router/-/react-router-7.1.1.tgz#88f5657fa5b8f0b918c7222ec710de0274d00b2e"
   dependencies:
     "@types/cookie" "^0.6.0"
     cookie "^1.0.1"
