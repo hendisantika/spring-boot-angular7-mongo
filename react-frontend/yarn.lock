@@ -6759,9 +6759,9 @@ react-dev-utils@^12.0.1:
     strip-ansi "^6.0.1"
     text-table "^0.2.0"
 
-react-dom@^19.2.5:
-  version "19.2.5"
-  resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-19.2.5.tgz#b8768b10837d0b8e9ca5b9e2d58dff3d880ea25e"
+react-dom@^19.2.6:
+  version "19.2.6"
+  resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-19.2.6.tgz#44a81b0bcca22da814c00847d09d01c8615529b7"
   dependencies:
     scheduler "^0.27.0"
 
